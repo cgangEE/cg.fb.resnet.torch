@@ -49,7 +49,7 @@ function  M.exec(opt, cacheFile)
     local valImageList = {}
     for fold = 1,5 do
         local imagesName = paths.concat(opt.data, 
-                'flickr10000_group' .. fold .. '.txt')
+                'flickr2349_group' .. fold .. '.txt')
         if fold == opt.fold + 0 then
             table.insert(valImageList, imagesName)
         else

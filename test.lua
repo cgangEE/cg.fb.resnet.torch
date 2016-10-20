@@ -8,7 +8,7 @@ require 'image'
 require 'socket'
 
 function Test()
-    model = torch.load('checkpointFlickrNist1/model_40.t7'):cuda()
+    model = torch.load('checkpointFlickr2/model_30.t7'):cuda()
     model:evaluate()
 
     meanstd = {
@@ -26,6 +26,7 @@ function Test()
 
     img = image.load('./2.jpg', 3, 'float')
     img = transform(img)
+    print(img:size())
 
     output = model:forward(img:cuda())
     return output
