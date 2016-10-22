@@ -9,10 +9,16 @@ end
 
 errSum = 0.0
 
-for i = 1,5 do
+M = {}
+table.insert(M, 'log50_1')
+table.insert(M, 'log101_1')
+
+--for i = 1,5 do
+for i, f in pairs(M) do
    errRates = {} 
    err = 0.0
-   for line in io.lines('log' .. i) do
+--   for line in io.lines('log' .. i) do
+   for line in io.lines(f) do 
       if (string.find(line, 'Finished epoch') ~= nil) then 
          b, e = string.find(line, 'top1:')
          errRate = string.sub(line, e+1, e+8)
