@@ -10,8 +10,8 @@ end
 errSum = 0.0
 
 M = {}
-table.insert(M, 'log50_1')
-table.insert(M, 'log101_1')
+table.insert(M, 'log152_1')
+table.insert(M, 'log200_1')
 
 --for i = 1,5 do
 for i, f in pairs(M) do
